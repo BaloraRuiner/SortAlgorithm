@@ -1,0 +1,3 @@
+﻿  SortAlgorithm.cpp
+P:\Repos\SortAlgorithm\SortAlgorithm.cpp(8,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SortAlgorithm.vcxproj -> P:\Repos\SortAlgorithm\x64\Debug\SortAlgorithm.exe
