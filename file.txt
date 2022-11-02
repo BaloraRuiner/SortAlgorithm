@@ -1,0 +1,12 @@
+Scale massive: 100
+Number operation comparison: 8811
+Number operation change: 2424
+Time: 0
+Scale massive: 100
+Number operation comparison: 7920
+Number operation change: 2366
+Time: -0.001
+Scale massive: 1000
+Number operation comparison: 965034
+Number operation change: 253707
+Time: -0.002
