@@ -8,12 +8,17 @@ using namespace std;
 
 int main()
 {
-    /*auto min = 0;
+    ofstream ofs;
+    ofs.open("file.txt", ofstream::out | ofstream::trunc);
+    ofs.close();
+    auto min = 0;
     auto max = 0;  
-    auto step;
-    auto scale;
-    auto Array = new int[scale];
+    auto step = 0;
+    auto currentScale = 0;
+    auto Array = new int[min];
     int function;
+    int Arr[2];
+    bool sorting = false;
     bool flag = true;
     interface();
     while (flag)
@@ -23,26 +28,45 @@ int main()
         switch (function)
         {
         case 1:
-            RandomArray(Array, scale, min, max);
+            setArraySize(Arr);
+            min = Arr[0];
+            max = Arr[1];
+            step = setArrayStep();
+            break;
+        case 2:
+            if (output.is_open())
+            {
+                output << "New" << endl;
+                output << string(32, '-') << endl;
+            }
+            for (int i = min; i <= max; i+=step)
+            {
+                Array = new int[i];
+                if (!sorting)
+                    RandomArray(Array, i);
+                HeapSort(Array, i);
+                currentScale = i;
+            }
+            break;
+        case 3:
+            if (output.is_open())
+            {
+                output << "New" << endl;
+                output << string (32, '-') << endl;
+            }
+            for (int i = min; i <= max; i+=step)
+            {
+                Array = new int[i];
+                if (!sorting)
+                    RandomArray(Array, i);
+                BubbleSort(Array, i);
+                currentScale = i;
+            }
+            break;
+        case -1:
+            flag = false;
             break;
         }
-    }*/
-    auto step = 0;
-    int scale;
-    cout << "Enter scale massive: ";
-    cin >> scale;
-    int* Array = new int[scale];
-    RandomArray(Array, scale, 10, 100);
-    step = setArrayStep();
-    //WriteInFile(Array, scale);
-    //ReadFromFile(Array, scale);
-    PutArray(Array, scale);
-    cout << endl;
-    BubbleSort(Array, scale);
-    cout << "Bubble sort: ";
-    PutArray(Array, scale);
-    cout << endl;
-    //HeapSort(Array, scale);
-    //cout << "Heap sort: ";
-    //PutArray(Array, scale);
+        output.close();
+    }
 }

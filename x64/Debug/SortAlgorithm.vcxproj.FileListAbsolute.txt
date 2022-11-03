@@ -1,1 +1,2 @@
 P:\Repos\SortAlgorithm\x64\Debug\SortAlgorithm.exe
+C:\Users\freak\Desktop\SortAlgorithm\x64\Debug\SortAlgorithm.exe
