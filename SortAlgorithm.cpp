@@ -34,6 +34,12 @@ int main()
             step = setArrayStep();
             break;
         case 2:
+            sorting = true;
+            break;
+        case 3:
+            sorting = false;
+            break;
+        case 4:
             if (output.is_open())
             {
                 output << "New" << endl;
@@ -44,11 +50,24 @@ int main()
                 Array = new int[i];
                 if (!sorting)
                     RandomArray(Array, i);
+                else
+                    SetSortValues(Array, i);
+                //cout << "BEST:" << endl;
+                bestHappening(Array, i);
+                HeapSort(Array, i);
+                currentScale = i;
+                //cout << "AVERAGE:" << endl;
+                averageHappening(Array, i);
+                HeapSort(Array, i);
+                currentScale = i;
+                //cout << "BAD:" << endl;
+                badHappening(Array, i);
                 HeapSort(Array, i);
                 currentScale = i;
             }
+            cout << "Done!" << endl;
             break;
-        case 3:
+        case 5:
             if (output.is_open())
             {
                 output << "New" << endl;
@@ -59,9 +78,22 @@ int main()
                 Array = new int[i];
                 if (!sorting)
                     RandomArray(Array, i);
+                else
+                    SetSortValues(Array, i);
+                //cout << "BEST:" << endl;
+                bestHappening(Array, i);
+                BubbleSort(Array, i);
+                currentScale = i;
+                //cout << "AVERAGE:" << endl;
+                averageHappening(Array, i);
+                BubbleSort(Array, i);
+                currentScale = i;
+                //cout << "BAD:" << endl;
+                badHappening(Array, i);
                 BubbleSort(Array, i);
                 currentScale = i;
             }
+            cout << "Done!" << endl;
             break;
         case -1:
             flag = false;

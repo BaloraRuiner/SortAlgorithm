@@ -1,3 +1,3 @@
 ﻿  SortAlgorithm.cpp
-C:\Users\freak\Desktop\SortAlgorithm\Function.h(21,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  SortAlgorithm.vcxproj -> C:\Users\freak\Desktop\SortAlgorithm\x64\Debug\SortAlgorithm.exe
+P:\Repos\SortAlgorithm\Function.h(25,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SortAlgorithm.vcxproj -> P:\Repos\SortAlgorithm\x64\Debug\SortAlgorithm.exe
